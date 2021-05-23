@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>.formBackgroud{
+        background-color: #f4f5f7;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .freebirdViewerHeaderCard {
+        max-height: 22.576185101580137vw;
+        max-width: 90vw;
+        height: 160.54176072234762px;
+        width: 640px;
+        background-image: url(https://lh4.googleusercontent.com/1VlCPTsMumj_XdCOUp8i61j1lSf6ddwIFv6JJfozMLiZzLz2YIPSSM9FLUHgJBZkzGibHklPXBi8Pr1xfFa0u1MUZecjGlNH7tJgx66231UGn4XZeFdstpSmplDVxchI6Q=w3544);
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        margin-top: 12px;
+        margin-left: 305.5px;
+        margin-right: 305.5px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .formcontent{
+        max-height: 100px;
+        max-width: 90vw;
+        height: 160.54176072234762px;
+        width: 640px;
+        background-size: cover;
+        background-position: center;
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        margin-left: 305.5px;
+        margin-right: 305.5px;
+        margin-top: 12px;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    .basetitle{
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 0%;
+        position: relative;
+        word-wrap: break-word;
+        text-align: justify;
+        padding: 10px 0;
+        display: block;
+        margin-left: 15px;
+    }
+    .asterisk{
+        color:#d93025 ;
+    }
+    .exportInput{
+        
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: .2px;
+        line-height: 20px;
+        color: #202124;
+        flex-shrink: 1;
+        background-color: transparent;
+        border: none;
+        display: block;
+        width: 250px;
+        outline: none;
+        border-bottom-style: solid;
+        border-color: #dadce0;
+        border-width: 2px;
+    }
+    .custom-control custom-radio{
+        margin-left: 50px;
+    }
+    .formcontentlarge{
+        max-width: 90vw;
+        height: 160.54176072234762px;
+        width: 640px;
+        background-size: cover;
+        background-position: center;
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        margin-left: 305.5px;
+        margin-right: 305.5px;
+        margin-top: 12px;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    .description{
+        border-top-style: solid;
+        border-color: #0f466e;
+        border-width: 10px;
+        max-height: auto;
+        max-width: 90vw;
+        height: 200.54176072234762px;
+        width: 640px;
+        background-size: cover;
+        background-position: center;
+        background-color: #fff;
+        border-radius: 8px;
+        margin-left: 305.5px;
+        margin-right: 305.5px;
+        margin-top: 12px;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    .btn{
+        background-size: cover;
+        background-position: center;
+        background-color:#055791;
+        border-radius: 8px;
+        margin-left: 320px;
+        margin-top: 12px;
+        margin-bottom: 50px;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    .foot{
+        color: #bebebe;
+        border-radius: 8px;
+    
+        margin-top: 12px;
+        margin-bottom: 5px;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    .formlist{
+        height: 300px;
+        background-color: #f4f5f7;
+    }
+    .freebirdFormeditorViewFatCard {
+        box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+        transition: box-shadow 280ms cubic-bezier(0.4,0.0,0.2,1);
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        align-items: center;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        width: 48px;
+    }
+    .freebirdFormeditorViewFatMenuItem {
+        height: 36px;
+        margin: 0 2px;
+        width: 36px;
+    }
+    .appsMaterialWizButtonPapericonbuttonEl {
+        transition: background .3s;
+        border: 0;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        height: 48px;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        width: 48px;
+        z-index: 0;
+    }
+    
+    </style>
+
+</head>
+<body>
+    <div style="background-color: #fff;">
+        <div class = "basetitle">
+        <img style="width: 40px; background-color: #fff;" src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png" alt="">
+        Featurepreneur
+    </div>
+    </div>
+    <div class="formlist">
+        <label style="margin-left: 100px;margin-top: 15px;">Start a new form</label>
+        <br>
+        <a target="_blank" href="#" style="margin-left: 100px;margin-top: 20px;">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2FMcL%2F586%2FMcL586pni.png&f=1&nofb=1" alt="" style="width:150px;background-color: #fff;">
+          </a>
+          <a target="_blank" href="/featurethon" style="margin-left: 100px;margin-top: 20px;">
+            <img style="width: 150px; background-color: #fff;" src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png" alt="">
+        </a>
+          <br>
+        <label style="margin-left: 100px;">Blank</label>
+
+      
+          <label style="margin-left: 200px;">Featurethon</label>
+
+    </div>
+    
+       
+<br>
+<br>
+<br>
+<!-- <div class="freebirdFormeditorViewFatPositioner" jsname="KJ3tgc" style="top: 152px;"><div class="freebirdFormeditorViewFatCard"><div jscontroller="ii1Xhc" jsaction="rcuQ6b:YCxUD;JIbuQc:TnvYfd" data-action-id="freebird-add-last-field" data-action-properties="enabled" data-entry-point="4" class="freebirdFormeditorViewFatMenuItemContainer"><div role="button" class="appsMaterialWizButtonEl appsMaterialWizButtonPapericonbuttonEl appsMaterialWizButtonPapericonbuttonLight freebirdFormeditorViewFatMenuItem" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" aria-label="Add question" tabindex="0" data-tooltip="Add question" data-tooltip-position="right" data-tooltip-vertical-offset="1" guidedhelpid="addQuestionGH" data-tooltip-horizontal-offset="0"><div class="appsMaterialWizButtonPapericonbuttonRipple exportInk" jsname="ksKsZd"></div><span jsslot="" class="appsMaterialWizButtonPapericonbuttonContent"><span class="appsMaterialWizButtonPapericonbuttonContentSpan"><div class="freebirdMaterialIconIconEl freebirdMaterialIconIconUpdatedM2"><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-add-circle-outline-b" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconLightIcon freebird-qp-icon-add-circle-outline-w" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconM2Icon freebird-qp-icon-add-circle-outline" aria-hidden="true">&nbsp;</div></div></span></span></div></div><div jscontroller="ii1Xhc" jsaction="rcuQ6b:YCxUD;JIbuQc:TnvYfd" data-action-id="freebird-import-question" data-action-properties="enabled" data-entry-point="4" class="freebirdFormeditorViewFatMenuItemContainer"><div role="button" class="appsMaterialWizButtonEl appsMaterialWizButtonPapericonbuttonEl appsMaterialWizButtonPapericonbuttonLight freebirdFormeditorViewFatMenuItem" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" jsname="IFMiyd" aria-label="Import questions" tabindex="0" data-tooltip="Import questions" data-tooltip-position="right" data-tooltip-vertical-offset="1" data-tooltip-horizontal-offset="0"><div class="appsMaterialWizButtonPapericonbuttonRipple exportInk" jsname="ksKsZd"></div><span jsslot="" class="appsMaterialWizButtonPapericonbuttonContent"><span class="appsMaterialWizButtonPapericonbuttonContentSpan"><div class="freebirdMaterialIconIconEl freebirdMaterialIconIconUpdatedM2"><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-import-question-b" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconLightIcon freebird-qp-icon-import-question-w" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconM2Icon freebird-qp-icon-import-question-m2" aria-hidden="true">&nbsp;</div></div></span></span></div></div><div jscontroller="ii1Xhc" jsaction="rcuQ6b:YCxUD;JIbuQc:TnvYfd" data-action-id="freebird-add-section-header" data-action-properties="enabled" data-entry-point="4" class="freebirdFormeditorViewFatMenuItemContainer"><div role="button" class="appsMaterialWizButtonEl appsMaterialWizButtonPapericonbuttonEl appsMaterialWizButtonPapericonbuttonLight freebirdFormeditorViewFatMenuItem" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" aria-label="Add title and description" tabindex="0" data-tooltip="Add title and description" data-tooltip-position="right" data-tooltip-vertical-offset="1" data-tooltip-horizontal-offset="0"><div class="appsMaterialWizButtonPapericonbuttonRipple exportInk" jsname="ksKsZd"></div><span jsslot="" class="appsMaterialWizButtonPapericonbuttonContent"><span class="appsMaterialWizButtonPapericonbuttonContentSpan"><div class="freebirdMaterialIconIconEl freebirdMaterialIconIconUpdatedM2"><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-add-header-b" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconLightIcon freebird-qp-icon-add-header-w" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconM2Icon freebird-qp-icon-add-header" aria-hidden="true">&nbsp;</div></div></span></span></div></div><div jscontroller="ii1Xhc" jsaction="rcuQ6b:YCxUD;JIbuQc:TnvYfd" data-action-id="freebird-add-image" data-action-properties="enabled" data-entry-point="4" class="freebirdFormeditorViewFatMenuItemContainer"><div role="button" class="appsMaterialWizButtonEl appsMaterialWizButtonPapericonbuttonEl appsMaterialWizButtonPapericonbuttonLight freebirdFormeditorViewFatMenuItem" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" aria-label="Add image" tabindex="0" data-tooltip="Add image" data-tooltip-position="right" data-tooltip-vertical-offset="1" data-tooltip-horizontal-offset="0"><div class="appsMaterialWizButtonPapericonbuttonRipple exportInk" jsname="ksKsZd"></div><span jsslot="" class="appsMaterialWizButtonPapericonbuttonContent"><span class="appsMaterialWizButtonPapericonbuttonContentSpan"><div class="freebirdMaterialIconIconEl freebirdMaterialIconIconUpdatedM2"><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-image-m2-b" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconLightIcon freebird-qp-icon-image-m2-w" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconM2Icon freebird-qp-icon-image-m2" aria-hidden="true">&nbsp;</div></div></span></span></div></div><div jscontroller="ii1Xhc" jsaction="rcuQ6b:YCxUD;JIbuQc:TnvYfd" data-action-id="freebird-add-video" data-action-properties="enabled" data-entry-point="4" class="freebirdFormeditorViewFatMenuItemContainer"><div role="button" class="appsMaterialWizButtonEl appsMaterialWizButtonPapericonbuttonEl appsMaterialWizButtonPapericonbuttonLight freebirdFormeditorViewFatMenuItem" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" aria-label="Add video" tabindex="0" data-tooltip="Add video" data-tooltip-position="right" data-tooltip-vertical-offset="1" data-tooltip-horizontal-offset="0"><div class="appsMaterialWizButtonPapericonbuttonRipple exportInk" jsname="ksKsZd"></div><span jsslot="" class="appsMaterialWizButtonPapericonbuttonContent"><span class="appsMaterialWizButtonPapericonbuttonContentSpan"><div class="freebirdMaterialIconIconEl freebirdMaterialIconIconUpdatedM2"><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-video-m2-b" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconLightIcon freebird-qp-icon-video-m2-w" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconM2Icon freebird-qp-icon-video-m2" aria-hidden="true">&nbsp;</div></div></span></span></div></div><div jscontroller="ii1Xhc" jsaction="rcuQ6b:YCxUD;JIbuQc:TnvYfd" data-action-id="freebird-add-page-break" data-action-properties="enabled" data-entry-point="4" class="freebirdFormeditorViewFatMenuItemContainer"><div role="button" class="appsMaterialWizButtonEl appsMaterialWizButtonPapericonbuttonEl appsMaterialWizButtonPapericonbuttonLight freebirdFormeditorViewFatMenuItem" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" aria-label="Add section" tabindex="0" data-tooltip="Add section" data-tooltip-position="right" data-tooltip-vertical-offset="1" data-tooltip-horizontal-offset="0"><div class="appsMaterialWizButtonPapericonbuttonRipple exportInk" jsname="ksKsZd"></div><span jsslot="" class="appsMaterialWizButtonPapericonbuttonContent"><span class="appsMaterialWizButtonPapericonbuttonContentSpan"><div class="freebirdMaterialIconIconEl freebirdMaterialIconIconUpdatedM2"><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-section-m2-b" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconLightIcon freebird-qp-icon-section-m2-w" aria-hidden="true">&nbsp;</div><div class="freebirdMaterialIconIconImage freebirdMaterialIconIconM2Icon freebird-qp-icon-section-m2" aria-hidden="true">&nbsp;</div></div></span></span></div></div></div></div> -->
+</body>
+</html>
