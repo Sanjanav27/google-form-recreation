@@ -113,8 +113,8 @@ def regsuccess():
         if tab==collec:
             return render_template("signup.html",a="Username and password are already taken. Try another.") 
     collection=db[tab]
-    data={}
-    collection.insert_one(data)
+    # data={}
+    # collection.insert_one(data)
     return render_template("signup.html",a="successfully registered")    
 
 @app.route("/ques",methods=["POST","GET"])
