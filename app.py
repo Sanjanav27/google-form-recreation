@@ -27,20 +27,10 @@ def Login():
     tab=l_id+l_pass
     
 
-    for collec in db.collection_names():
-        if tab==collec:
-            source = db["admin1234"]
-            destination = db[tab]
-
-            # Remove all documents, or make modifications. 
-            destination.delete_many({}) 
-
-            # Restore documents from the source collection.  
-            for doc in source.find({}): 
-                print(doc)
-                destination.insert(doc)
-            collection=db[tab]
-            return render_template("home.html",tab=tab)
+    # for collec in db.collection_names():
+    if db[tab]==admin:
+        collection=db[tab]
+        return render_template("home.html",tab=tab)
     
     return render_template('invalid.html',invalid='Please enter a valid data')
 
@@ -66,8 +56,8 @@ def submit():
     }
 
     print(data)
-    for collec in db.collection_names():
-        db[collec].insert_one(data)
+
+    admin.insert_one(data)
     return render_template("form.html")
 
 
@@ -111,34 +101,6 @@ def individual():
         count=count+1
     return render_template("individual.html",all=all_data,count=count)
 
-
-@app.route("/register",methods=["POST","GET"])
-def register():
-    return render_template("signup.html")
-
-@app.route("/regsuccess",methods=["POST","GET"])
-def regsuccess():
-    l_id = request.form["logname"]
-    l_pass  = request.form["logpass"]
-
-    tab=l_id+l_pass
-    for collec in db.collection_names():
-        if tab==collec:
-            return render_template("signup.html",a="Username and password are already taken. Try another.") 
-    collection=db[tab]
-    data={}
-    collection.insert_one(data)
-    return render_template("signup.html",a="successfully registered")    
-
-@app.route("/ques",methods=["POST","GET"])
-def ques():
-    return render_template("question.html")
-
-@app.route("/detail",methods=["POST","GET"])
-def detail():
-    detail=request.form["name"]
-    print(detail)
-    return render_template("question.html")
 
 if __name__ == '__main__':
     app.run(port=5000,debug=True)
