@@ -11,6 +11,7 @@ app = Flask(__name__)
 MONGO_URI       = os.getenv("MONGO_URI")
 cluster=MongoClient(MONGO_URI)
 db=cluster["Google-recreation"]
+admin=db["admin1234"]
 
 
 @app.route("/", methods = ["GET","POST"])
@@ -24,9 +25,20 @@ def Login():
     l_pass  = request.form["logpass"]
 
     tab=l_id+l_pass
+    
 
     for collec in db.collection_names():
         if tab==collec:
+            source = db["admin1234"]
+            destination = db[tab]
+
+            # Remove all documents, or make modifications. 
+            destination.delete_many({}) 
+
+            # Restore documents from the source collection.  
+            for doc in source.find({}): 
+                print(doc)
+                destination.insert(doc)
             collection=db[tab]
             return render_template("home.html",tab=tab)
     
@@ -34,13 +46,12 @@ def Login():
 
     
 
-@app.route("/featurethon/<tab>",methods=["POST","GET"])
-def featurethon(tab):
-    return render_template("form.html",tab=tab)
+@app.route("/featurethon",methods=["POST","GET"])
+def featurethon():
+    return render_template("form.html")
 
-@app.route("/submit/<tab>",methods=["POST","GET"])
-def submit(tab):
-    collection=db[tab]
+@app.route("/submit",methods=["POST","GET"])
+def submit():
     data={
     "name" : request.form["name"],
     "email" : request.form["email"],
@@ -55,13 +66,14 @@ def submit(tab):
     }
 
     print(data)
-    collection.insert_one(data)
-    return render_template("form.html",tab=tab)
+    for collec in db.collection_names():
+        db[collec].insert_one(data)
+    return render_template("form.html")
 
 
-@app.route("/response/<tab>",methods=["POST","GET"])
-def response(tab):
-    collection=db[tab]
+@app.route("/response",methods=["POST","GET"])
+def response():
+    
     name=[]
     only_names=[]
     only_email=[]
@@ -71,32 +83,33 @@ def response(tab):
     only_member3=[]
     only_city=[]
     count=0
+    try:
+        for all in admin.find({},{ "_id": 0}):
+            print(all)
+            only_names.append(all["name"])
 
-    for all in collection.find({},{ "_id": 0}):
-        print(all)
-        only_names.append(all["name"])
-
-        only_email.append(all["email"])
-        only_college.append(all["college"])
-        only_team_name.append(all["team_name"])
-        only_member2.append(all["member2"])
-        only_member3.append(all["member3"])
-        only_city.append(all["city"])
-        count=count+1
+            only_email.append(all["email"])
+            only_college.append(all["college"])
+            only_team_name.append(all["team_name"])
+            only_member2.append(all["member2"])
+            only_member3.append(all["member3"])
+            only_city.append(all["city"])
+            count=count+1
         
-    print(only_names)
-    return render_template("response.html",tab=tab,name=only_names,email=only_email,college=only_college,team_name=only_team_name,member2=only_member2,member3=only_member3,city=only_city,count=count)
+        print(only_names)
+        return render_template("response.html",name=only_names,email=only_email,college=only_college,team_name=only_team_name,member2=only_member2,member3=only_member3,city=only_city,count=count)
+    except:
+        return render_template("response.html",name=only_names,email=only_email,college=only_college,team_name=only_team_name,member2=only_member2,member3=only_member3,city=only_city,count=count)
 
-@app.route("/individual/<tab>",methods=["POST","GET"])
-def individual(tab):
-    collection=db[tab]
+@app.route("/individual",methods=["POST","GET"])
+def individual():
     all_data=[]
     count=0
-    for all in collection.find({},{ "_id": 0}):
+    for all in admin.find({},{ "_id": 0}):
         print(all)
         all_data.append(all)
         count=count+1
-    return render_template("individual.html",tab=tab,all=all_data,count=count)
+    return render_template("individual.html",all=all_data,count=count)
 
 
 @app.route("/register",methods=["POST","GET"])
@@ -113,8 +126,8 @@ def regsuccess():
         if tab==collec:
             return render_template("signup.html",a="Username and password are already taken. Try another.") 
     collection=db[tab]
-    # data={}
-    # collection.insert_one(data)
+    data={}
+    collection.insert_one(data)
     return render_template("signup.html",a="successfully registered")    
 
 @app.route("/ques",methods=["POST","GET"])

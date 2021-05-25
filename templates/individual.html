@@ -180,20 +180,7 @@
 
 
     </div>
-    <div style="background-color: #fff;">
-
-        <div  style="text-align: center;margin-left: 42%;margin-right: 41%;">
-    <ul class="nav nav-tabs" >
-        <li class="nav-item">
-          <a class="nav-link " href="/featurethon/{{tab}}">Questions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/response/{{tab}}">Response</a>
-        </li>
-        
-      </ul>
-    </div>
-</div>
+    
  
     <center>
     <div class="description">
@@ -203,13 +190,13 @@
         <br><br><br>
         <ul class="nav nav-tabs" >
             <li class="nav-item">
-              <a class="nav-link " href="/response/{[tab}}">Summary</a>
+              <a class="nav-link " href="/response">Summary</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#">Question</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="/individual/{{tab}}">Individual</a>
+                <a class="nav-link active" href="/individual">Individual</a>
               </li>
           </ul>
 </div>
@@ -221,7 +208,7 @@
 
         <div class="basetitle">
             {%for key, value in name.items()%}
-            <p style="text-transform:uppercase;margin-top: 8px;">{{key}}<span style="text-transform:capitalize;padding-left: 9px;">:{{value}}</span>
+            <p style="text-transform:uppercase;margin-top: 8px;">{{key}}<span style="text-transform:none;padding-left: 9px;">:{{value}}</span>
             </p>
             {% endfor %}
 
