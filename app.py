@@ -25,14 +25,17 @@ def Login():
     l_pass  = request.form["logpass"]
 
     tab=l_id+l_pass
-    
+    print(tab)
+    # print(db)
 
-    # for collec in db.collection_names():
-    if db[tab]==admin:
-        collection=db[tab]
-        return render_template("home.html",tab=tab)
-    
-    return render_template('invalid.html',invalid='Please enter a valid data')
+    # for collec in db.list_collection_names():
+    #     print(collec)
+    #     if tab == collec:
+    #         # collection=db[tab]
+    #         print(db[tab])
+    return render_template("home.html",tab="admin1234")
+        
+    # return render_template('invalid.html',invalid='Please enter a valid data')
 
     
 
